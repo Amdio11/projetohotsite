@@ -37,10 +37,10 @@ namespace Hotsite.Controllers
             {
                 _logger.LogError(e.Message);
                 return Json(new {Status = "ERR", Mensagem = "Deu ruim heim...falhouuuuu o banco de dados !!!"});
-                //throw new Exception("A coisa ta feia heim...Deu ruim de novo!!!"); //uso para fazer o comentario se nao usar js
+                
             }
             
-            //return View("Index",cad);
+            
         }
 
         public IActionResult Error()
