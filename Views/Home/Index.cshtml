@@ -3,41 +3,189 @@
     ViewData["Title"] = "Hotsite";
 }
 
-<div>
-    <h1>Iniciativa Saúde da Cidade</h1>
-    <p>
-        Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-    </p>
-    <p>
-        Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-    </p>
+<style>
+    
+.fotog{
+    margin-left: 150px;
+}
+    
+#descricao{
+  
+  margin-left: -3px;
+}
+.top{
+    margin-top: 20px;
+}
+.ima{
+    margin-top: 20px;
+}
+.contato{
+    background-color: silver;
+}
+#menu{
+    
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: left;
+}
+#menu1{
+    margin-left: 5px;
+}
+a{
+    padding: 20px 35px;
+}
+#botao{
+    float: right;
+    
+}
+#ima1{
+    float: left;
+
+}
+#ima2{
+    font-size: large;
+    margin-top: 0;
+}
+.centro{
+    text-align: center;
+    padding-left: 200px;
+}
+.centro1{
+    text-align: center;
+    padding-left: 120px;
+}
+
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 top" style="">
+            <section id="descricao">
+                <h1>Iniciativa Saúde da Cidade</h1>
+                    <p>
+                        Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.accommodare his consul copiosae legendos at vix ad putent delectus delicata usu.
+                    </p>
+
+                    <p>
+                        Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+                    </p>
+            </section>
+        </div>
+        <div class="col-md-8 ima" style="">
+            <img src="/imagens/2.jpg" class="img-fluid" style=""/>
+        </div>
+    </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 mt-5 border border-dark" id="divFormulario"> 
+            <h2>Entre em contato!:</h2>
+                <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+                    <form  action="/Home/Cadastrar" method="POST"id="formCadastro">
+                        <div class="form-group">
+                            <label for="txtNome">Nome:</label>
+                            <input type="text" id="txtNome" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtEmail">Email:</label>
+                            <input type="email" id="txtEmail" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtMensagem">Mensagem:</label>
+                            <input type="text" id="txtMensagem" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary float-right">Enviar</button>
+                    </form>
+        </div>
+    
 
-<div>
-    <h2>Entre em contato!:</h2>
-    <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
-
-    <form action="/Home/Cadastrar" method="POST">
-        <div>
-            <label asp-for="Nome">Nome:</label>
-            <input asp-for="Nome" />
+        <div class="col-md-" style="margin-top: 50px; margin-left:10px; ">
+            <img src="/imagens/1.jpg" class="img-fluid;" style="widht:150px; height:150px" >
+            <div class="row">
+                <a href="#" class="link" style="margin-left: 15px;" data-toggle="modal" data-target="#agenda">Agenda de eventos</a>
+            </div>
         </div>
-        <div>
-            <label asp-for="Email">Email:</label>
-            <input asp-for="Email" />
+        <div class="col-md-" style="margin-top: 50px; margin-left:10px; ">
+            <img src="/imagens/3.jpg" class="img-fluid;" style="widht:150px; height:150px">
+        <div class="row">
+            <a href="#" class="link" style="margin-left: 10px;" data-toggle="modal" data-target="#saudavel">Dicas de vida saudável</a>
         </div>
-        <div>
-            <label asp-for="Mensagem">Mensagem (opcional):</label>
-            <textarea asp-for="Mensagem"></textarea>
+    </div>
+        <div class="col-md-" style="margin-top: 50px; margin-left:10px;">
+            <img src="/imagens/4.jpg" class="img-fluid" style="widht:150px; height:150px">
+        <div class="row">
+            <a href="#" class="link" style="margin-left: 30px;" data-toggle="modal" data-target="#apoiador">Apoiadores</a>
         </div>
-        <div>
-            <input type="submit" value="Enviar" />
+    </div>
+    <div class="row">
+        <div class="col-md-8" id="divCadastrado" style="display:none">
+        <h2>Obrigado pelo seu registro. Em breve contactaremos de volta!</h2>
         </div>
-    </form>
+    </div>
 </div>
-
-<div>
-    <a href="#">Agenda de eventos</a>
-    <a href="#">Dicas de vida saudável</a>
-    <a href="#">Apoiadores</a>
+    <div class="modal fade" id="agenda">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header centro">
+                    <h4 class="modal-title">Agenda</h4>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>        
+                <div class="modal-body">
+                    <h3>Agenda</h3>
+                    <p>10/10/10 - Evento 1</p>
+                    <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, velit distinctio eligendi id ullam temporibus ratione architecto eaque, dicta saepe delectus, voluptate sint dolores veniam nam doloremque iure aspernatur consequuntur.</P>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="saudavel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header centro1">
+                    <h4 class="modal-title">Dicas de vida saudavel</h4>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>        
+                <div class="modal-body">
+                    <p>10/10/10  10:10 - Evento 1</p>
+                    <br>
+                    <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>
+                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                       adipisicing elit.</p>
+                    <br>
+                    <p>10/10/10 10:10 - Evento 1</p>
+                    <br>
+                    <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>
+                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                       adipisicing elit.</p>
+                    <br>
+                    <p>10/10/10 10:10 - Evento 1</p>
+                    <br>
+                    <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>
+                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                       adipisicing elit.</p>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="apoiador">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header centro">
+                    <h4 class="modal-title">Apoiadores</h4>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>        
+                <div class="modal-body">
+                    
+                    <img src="/imagens/1.jpg"id="ima1" style="widht:50px; height:50px" <h1><strong id="ima2">Empresa 1</h1></strong><p>descrição</p>
+                    <img src="/imagens/2.jpg"id="ima1" style="widht:50px; height:50px" <h1><strong id="ima2">Empresa 2</h1></strong><p>descrição</p>
+                    <img src="/imagens/3.jpg"id="ima1" style="widht:50px; height:50px" <h1><strong id="ima2">Empresa 3</h1></strong><p>descrição</p>
+                    <img src="/imagens/4.jpg"id="ima1" style="widht:50px; height:50px" <h1><strong id="ima2">Empresa 4</h1></strong><p>descrição</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
