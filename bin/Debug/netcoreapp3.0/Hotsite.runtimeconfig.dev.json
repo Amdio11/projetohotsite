@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/aquila/.dotnet/store/|arch|/|tfm|",
+      "/Users/aquila/.nuget/packages"
+    ]
+  }
+}
