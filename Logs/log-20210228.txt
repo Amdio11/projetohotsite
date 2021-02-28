@@ -48,3 +48,4 @@
 2021-02-28T05:15:50.8016920-03:00 0HM6RO47HMVMR:00000001 [INF] Sending file. Request path: '"/imagens/1.jpg"'. Physical path: '"/Users/aquila/Desktop/projetohotsite/wwwroot/imagens/1.jpg"' (27b0a520)
 2021-02-28T05:15:50.8020340-03:00 0HM6RO47HMVMR:00000001 [INF] Request finished in 135.0668ms 200 image/jpeg (791a596a)
 2021-02-28T05:15:50.7787100-03:00 0HM6RO47HMVMQ:00000001 [INF] Request finished in 124.1482ms 200 image/jpeg (791a596a)
+2021-02-28T05:30:20.6723700-03:00  [INF] Application is shutting down... (90f52c38)
